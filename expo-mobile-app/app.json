@@ -1,0 +1,1 @@
+{"expo":{"name":"WHITE LABEL","slug":"white-label-auto","scheme":"whitelabel","version":"1.0.0","orientation":"portrait","userInterfaceStyle":"light","ios":{"supportsTablet":true,"bundleIdentifier":"ro.whitelabel.auto"},"android":{"package":"ro.whitelabel.auto"},"web":{"bundler":"metro","output":"single","name":"WHITE LABEL"},"plugins":["expo-router"]}}

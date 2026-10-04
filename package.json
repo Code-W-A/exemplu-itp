@@ -1,0 +1,30 @@
+{
+  "name": "white-label-auto",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "next-js",
+    "expo-mobile-app"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w next-js",
+    "dev:mobile": "npm run start -w expo-mobile-app",
+    "build:web": "npm run build -w next-js",
+    "typecheck": "tsc -p packages/core/tsconfig.json --noEmit && npm run typecheck -w next-js && npm run typecheck -w expo-mobile-app",
+    "test": "tsx --test tests/*.test.ts",
+    "reset": "node scripts/reset.mjs",
+    "ios": "node scripts/start-ios.mjs",
+    "test:e2e": "playwright test",
+    "format": "prettier --write packages/core/src next-js/src expo-mobile-app/app expo-mobile-app/src tests"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^22.0.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.20.6",
+    "typescript": "~5.9.2"
+  },
+  "overrides": {
+    "react-native-screens": "~4.26.0"
+  }
+}
